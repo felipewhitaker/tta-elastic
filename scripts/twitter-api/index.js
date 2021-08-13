@@ -73,7 +73,7 @@ function getTweets (screenName, callback) {
   });
 }
 
-getTweets('realdonaldtrump', (error, data) => {
+getTweets('jairbolsonaro', (error, data) => {
   if (error) return console.error('TWITTER FETCH ERROR', error);
   uploadToPG(pool, data, tweetsFromPG => uploadToES(client, data, tweetsFromPG));
 });
